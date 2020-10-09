@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "target": "es5",
+    "sourceMap": true,
+    "esModuleInterop": true,
+    //    "declaration": true,
+    /* 用来指定是否在编译的时候生成相应的".d.ts"声明文件。但是declaration和allowJs不能同时设为true */
+    "allowSyntheticDefaultImports": true /* 用来指定允许从没有默认导出的模块中默认导入 */,
+    "moduleResolution": "node",
+    "allowJs": true /* 用来指定是否允许编译js文件，默认是false，即不编译js文件 */,
+    //    "checkJs": true, /* 用来指定是否检查和报告js文件中的错误，默认是false */
+    "skipLibCheck": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "strict": true, // 开启所有严格的类型检查
+    "alwaysStrict": false, // 在代码中注入 "use strict";
+    "jsx": "react"
+  },
+  "exclude": ["node_modules"]
+}
