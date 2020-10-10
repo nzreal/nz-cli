@@ -44,6 +44,8 @@ commander.command('init <name>').action(async (name) => {
     await writeTemplate(curDir, template, name, package_config)
 
     spinner.stop()
+    clear()
+    console.log('\n All Done!')
   } catch (e) {
     console.log(chalk.red('something wrong happened'))
     console.log(e)
