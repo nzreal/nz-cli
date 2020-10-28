@@ -1,7 +1,7 @@
 const path = require('path')
 
-const __DEV__ = 'development'
-const __PROD__ = 'production'
+const DEV = 'development'
+const PROD = 'production'
 
 const cssRegex = /\.css$/
 const cssModuleRegex = /\.module\.css$/
@@ -11,8 +11,8 @@ const lessRegex = /\.less$/
 const lessModuleRegex = /\.module\.less$/
 
 module.exports = (ENV) => {
-  const isEnvProduction = ENV === 'production'
-  const isEnvDevelopment = ENV === 'development'
+  const isEnvProduction = ENV === PROD
+  const isEnvDevelopment = ENV === DEV
 
   const getStyleLoaders = (cssOptions, preProcessor) => {
     const loaders = [
@@ -68,6 +68,8 @@ module.exports = (ENV) => {
   }
 
   return {
+    entry: './src/index.tsx',
+
     resolve: {
       alias: {
         '@': path.resolve(__dirname, 'src'),
